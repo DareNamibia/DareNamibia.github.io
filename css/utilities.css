@@ -17,6 +17,7 @@
   background-color: #e32d2a;
   border: none;
   border-radius: 5px;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
