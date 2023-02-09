@@ -11,31 +11,43 @@
 
   <link rel="stylesheet" href="css/style.css">
   
-  <title>Read Our Blog</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <title>Gentium Air Freight | News</title>
 </head>
 
 <body id="home">
   <header class="hero blog">
     <div id="navbar" class="navbar top">
-      <div class="logo-pack">
-        <img src="images/Gentium-Logo-Red.png" alt="">
-        <h1 class="logo">
-          <span class="text-primary">Gentium</span> Air Freight
-        </h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#cases">Cases</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          
+      <a href="#home" id="logo-home">
+
+        <div class="logo-pack">
+          <img src="images/Gentium-Logo-Red.png" alt="">
+          <h1 class="logo">
+            <span class="text-primary">Gentium</span> Air Freight
+          </h1>
+        </div>
+      </a>
+      <nav class="navlinks">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="index.html#cargo" class="nav-link">Cargo</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">News</a></li>
+          <li class="nav-item">
+            <a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </div>
     <div class="content">
-      <h1>Blog</h1>
+      <h1>Our Latest News</h1>
     </div>
   </header>
 
@@ -106,21 +118,22 @@
       </div>
     </article>
 
+    <!-- Post 1 -->
     <article class="flex-columns flex-reverse">
       <div class="row">
         <div class="column">
           <div class="column-1">
-            <img src="images/blog/blog1.jpg" alt="">
+            <img src="images/news/air-freight-delays-due-to-covid.jpg" alt="">
           </div>
         </div>
         <div class="column">
           <div class="column-2 bg-dark">
-            <h2>Blog Post Four</h2>
+            <h2>Delays Due to Covid</h2>
             <p class="meta">
-              <i class="fas fa-user"></i> Posted by <strong>Jane Doe</strong> 23 August 19 2020
+              <i class="fas fa-user"></i> Posted by <strong>Alex Hue</strong> 23 July 2020
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum obcaecati facilis sunt dolorum vel iusto in veritatis assumenda quas pariatur?</p>
-            <a href="#" class="btn btn-light">
+            <p>Due to Covid-19 outbreak, there will be some minor or major delays with the delivery of your shipments.</p><p>However, every order will be delivered to the best available timeline. If there are any changes to the current situation, you'll be contacted by us for more information.</p>
+            <a href="posts/post-1.html" class="btn btn-light">
               <i class ="chevron" class="fas fa-chevron"></i>
               Read More</a>
           </div>
@@ -130,20 +143,14 @@
 
   </main>
 
-  <footer class="footer bg-dark">
-    <div class="social">
-      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-    </div>
-    <p>Copyright &copy; 2023 EdgeLedger</p>
+  <footer class="footer bg-light">
+    <p>Copyright &copy; 2023 | Developed and Managed by <a class="text-primary" href="https://www.instagram.com/dare.marketing.and.advertising/" target="_blank"><i class="fas fa-bullhorn"></i> <i><strong>DARE!</strong> Marketing & Advertising</i></a></p>
+
   </footer>
 
-  <script>
-        const navbar = document.getElementById('navbar')
+  <script>    const navbar = document.getElementById('navbar')
     let scrolled = false;
-
+  
     window.onscroll = function() {
       if(window.pageYOffset > 100) {
         navbar.classList.remove('top');
@@ -159,6 +166,25 @@
         scrolled = false;
       }
     };
+  
+    // Smooth Scrolling
+    $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+    
+        const hash = this.hash;
+    
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          2500
+        );
+      }
+    });
   </script>
+
+  <!-- Hamburger -->
+  <script src="js/hamburger.js"></script>
 </body>
 </html>
