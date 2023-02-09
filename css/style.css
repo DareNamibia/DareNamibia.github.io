@@ -225,6 +225,12 @@ img {
 /* News Post */
 .post {
   padding: 50px 30px;
+  max-width: 900px;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
 }
 
 .post h2 {
