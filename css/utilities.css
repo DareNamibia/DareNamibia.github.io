@@ -43,7 +43,7 @@
 
 .logo-pack:hover, 
 .hamburger:hover,
-.content img:hover,
+.content img,
 .icon-unit i:hover,
 .photo-grid a:hover,
 .nav-item:hover {
