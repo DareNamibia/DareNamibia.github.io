@@ -1,12 +1,10 @@
 /* COLOUR STYLES */
 .colour-primary {
   color: #d75323;
-  font-size: inherit;
 }
 
 .colour-light {
   color: #ebebeb;
-  font-size: inherit;
 }
 
 /* START OF SPACER STYLE */
@@ -21,57 +19,15 @@
 /* END OF SPACER STYLE */
 
 .container {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* START OF GENERAL TEXT STYLES */
-h1 {
-  font-size: 2rem;
-  font-weight: 200;
-}
-h2 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-h3 {
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 3.5rem;
-}
-p {
-  padding-bottom: 0.5rem;
-}
-/* END OF GENERAL TEXT STYLES */
 
-/* START OF TITLE TEXT STYLES */
-.home-title-text {
-  font-weight: 900;
-  overflow: hidden;
-}
-.about-title-text {
-  font-weight: 900;
-  overflow: hidden;
-}
-.work-title-text {
-  font-weight: 900;
-  overflow: hidden;
-}
-.services-title-text {
-  font-weight: 900;
-}
-.contact-title-text {
-  font-weight: 900;
-  overflow: hidden;
-}
-.newsletter-title-text {
-  font-weight: 500;
-}
-/* END OF TITLE TEXT STYLES */
 
 /* START OF SPECIAL TEXT CLASSES */
 .nerdy {
   font-family: 'Courier New', Courier, monospace;
-  word-break: break-all;
+  word-break: n;
 }
 .service-card-text {
   font-size: 20px;
@@ -80,6 +36,9 @@ p {
 }
 .contact-details {
   line-height: 2rem;
+}
+.typography-text {
+  font-size: 45px;
 }
 /* END OF SPECIAL TEXT CLASSES */
 
@@ -97,6 +56,7 @@ p {
   color: #1d1d1b;
   padding: 20px;
   border-radius: 5px;
+  display: inline-block;
 }
 .btn-orange-to-black:hover {
   background-color: #1d1d1b;
@@ -108,6 +68,9 @@ p {
   color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
+  display: inline-block;
+  display: inline-block;
+
 }
 .btn-black-to-orange:hover {
   background-color: #d75323;
@@ -119,6 +82,8 @@ p {
   color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
+  display: inline-block;
+
 }
 .btn-black-to-white:hover {
   background-color: #f4f4f4;
@@ -130,10 +95,6 @@ p {
 }
 .home-sales-text:hover {
   color: #e84e1c;
-}
-.service-btn {
-  display: block;
-  width: max-content;
 }
 .contact-details a {
   color: #f4f4f4;
@@ -166,17 +127,9 @@ p {
 
 /* START OF GRID LAYOUT */
 .gallery-container {
-  max-width: 1500px;
   margin: 0 auto;
 }
-.gallery {
-  overflow-x: visible;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-auto-flow: dense;
-  margin: 50px 0;
-}
+
 .gallery > div {
   display: flex;
   justify-content: center;
@@ -201,9 +154,8 @@ p {
   height: auto;
   vertical-align: middle;
   display: inline-block;
-  max-width: 100%;
   border-radius: 5px;
-  border: 7px solid #3c3c3c;
+  border: 5px solid #1d1d1b;
 }
 .gallery 
 .image-overlay {
@@ -216,7 +168,7 @@ p {
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: #3c3c3c;
+  background-color: #1d1d1b;
 }
 .overlay-text {
   color: #f4f4f4;
@@ -230,3 +182,16 @@ p {
   text-align: center;
 }
 /* END OF GRID LAYOUT */
+
+.shadow {
+  box-shadow: 5px 5px #3c3c3c;
+}
+.shadow-f {
+  box-shadow: 7px 7px #3c3c3c;
+}
+
+.float {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
