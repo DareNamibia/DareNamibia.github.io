@@ -27,7 +27,7 @@
 /* START OF SPECIAL TEXT CLASSES */
 .nerdy {
   font-family: 'Courier New', Courier, monospace;
-  word-break: n;
+  word-break: normal;
 }
 .service-card-text {
   font-size: 20px;
@@ -36,6 +36,7 @@
 }
 .contact-details {
   line-height: 2rem;
+  text-align: center;
 }
 .typography-text {
   font-size: 45px;
@@ -44,7 +45,8 @@
 
 /* START OF SPECIAL CLASSES */
 .social {
-  margin: 15px 5px;
+  /* margin: 15px 5px; */
+  font-weight: normal;
 }
 /* END OF SPECIAL CLASSES */
 
@@ -112,19 +114,6 @@
 }
 /* END OF BUTTONS */
 
-/* START OF CALLBACK FORM */
-.callback-form input {
-  width: 100%;
-  padding: 4px;
-  height: 40px;
-  border: #3c3c3c 1.5px solid;
-  border-radius: 5px;
-}
-.callback-form input:focus {
-  outline-color: #f19001;
-}
-/* END OF CALLBACK FORM */
-
 /* START OF GRID LAYOUT */
 .gallery-container {
   margin: 0 auto;
@@ -183,6 +172,59 @@
 }
 /* END OF GRID LAYOUT */
 
+/* START OF PROFILE LAYOUT */
+.profile > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile > div > img {
+  max-width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-image {
+  position: relative;
+  margin: 0 auto;
+  overflow-x: visible;
+}
+.profile-image:hover .image-overlay {
+  opacity: 1;
+  padding: 0;
+}
+.profile-image {
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 5px;
+  border: 5px solid #1d1d1b;
+}
+.profile 
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #1d1d1b;
+}
+.overlay-text {
+  color: #f4f4f4;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* END OF PROFILE LAYOUT */
+
 .shadow {
   box-shadow: 5px 5px #3c3c3c;
 }
@@ -195,3 +237,5 @@
   flex-direction: column;
   justify-content: center;
 }
+
+
