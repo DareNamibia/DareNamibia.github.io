@@ -3,8 +3,8 @@
   src: url(../fonts/MADE-Outer-Sans-Bold.otf);
 }
 @font-face {
-  font-family: Helvetica_Neue;
-  src: url(../fonts/Helvetica-Neue.ttc);
+  font-family: SourceSansPro-Light;
+  src: url(../fonts/SourceSansPro-Light.otf);
 }
 
 /* START OF SCROLLBAR */
@@ -49,6 +49,8 @@
   --gap-xl: 130px;
   --padding: 50px;
   --margin: 20px 0;
+  
+  --border-r: 5px;
 
   --line-s: 1px;
 
@@ -90,9 +92,15 @@ body {
   width: fit-content;
   padding: 10px 20px;
   font-size: var(--fs-m);
-  border-radius: 3px;
   margin-bottom: var(--gap-m);
   transition: 0.5s ease;
+  color: var(--clr-light);
+  border-radius: 7px;
+  border: none;
+  font-family: MADE-Outer-Sans-Bold;
+}
+.btn-web {
+  font-size: var(--fs-s);
 }
 .btn a, .btn a:visited {
   color: var(--clr-light);
@@ -102,13 +110,21 @@ body {
   background-color: var(--clr-dark);
   cursor: pointer;
 }
+.btn-dark:hover {
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  cursor: pointer;
+}
 .btn:hover {
   transform: translateY(-3px);
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
-
+a:visited {
+  color: inherit;
+}
 li {
   list-style: none;
 }
@@ -129,7 +145,7 @@ h1, h2, h3, a {
   font-family: MADE-Outer-Sans-Bold, sans-serif;
 }
 p, li {
-  font-family: Helvetice-Neue, sans-serif;
+  font-family: SourceSansPro-Light, sans-serif;
 }
 
 span.strike {
@@ -144,9 +160,21 @@ span.strike {
   text-align: center;
   margin: 0 auto;
 }
+.big-text-web {
+  font-size: clamp(2rem, 15vw, 30rem);
+  line-height: clamp(2.5rem, 12vw, 13rem);
+  text-align: center;
+  margin: 0 auto;
+}
 .text-hero {
   font-size: clamp(4rem, 20vw, 35rem);
   line-height: clamp(2.5rem, 12vw, 13rem);
+}
+.gen-p {
+  color: var(--clr-light);
+  width: min(700px, 80vw);
+  margin: 0 auto;
+  padding-bottom: var(--gap-m);
 }
 /* END OF TEXT */
 
@@ -165,25 +193,27 @@ nav {
 }
 .nav-list li:nth-child(1),
 .nav-list li:nth-child(3) {
-  color: var(--clr-yellow);
+  color: var(--clr-light);
 }
 .nav-list li:nth-child(2) {
-  color: var(--clr-light);
+  color: var(--clr-yellow);
 }
 /* END OF NAVBAR */
 
 /* HOME */
-.video-bg-s {
-  display: block;
-}
-.video-bg-l {
-  display: none;
-}
 
 #home {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: min(100vh);
+}
+.video-bg-s {
+  display: block;
+  background-color: var(--clr-dark);
+}
+.video-bg-l {
+  display: none;
+  background-color: var(--clr-dark);
 }
 #home header {
   display: flex;
@@ -207,6 +237,10 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: 90vh;
+  background-image: url(/images/brand/bull.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #about .title-header {
   padding-top: 100px;
@@ -316,7 +350,7 @@ nav {
 
 /* FOOTER */
 footer {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,12 +360,52 @@ footer {
   padding: var(--gap-l) var(--gap-m);
 }
 .footer-text {
-  margin-top: auto;
+  margin-top: var(--gap-s);
   text-align: center;
-  margin-bottom: var(--gap-m);
+  margin-bottom: var(--gap-s);
 }
 /* END OF FOOTER */
+.web-hero {
+  height: 70vh;
+  display: grid;
+  place-content: center;
+}
+.website-header {
+  text-align: center;
+}
+.website-image {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+}
+.website-image img {
+  border-radius: var(--border-r);
+  width: 100%;
+}
 
+.form-container {
+  margin-top: 5px;
+  padding: 10px;
+}
+.form-control {
+  margin: 15px;
+}
+.callback-form {
+  width: min(500px, 100%);
+  text-align: center;
+  margin: 0 auto;
+}
+.form-control input {
+  text-align: center;
+  width: clamp(100%, 10vw + 5px, 200px);
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  border: #636b78 1px solid;
+  border-radius: var(--border-r);
+}
+.form-control input:focus {
+  outline-color: var(--clr-yellow);
+}
 
 @media screen and (min-width: 769px) {
   .flex-row {
