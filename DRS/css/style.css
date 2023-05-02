@@ -340,7 +340,7 @@ section {
 .content-section-four {
   max-width: 900px;
   margin-top: auto;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .content-data-recovery {
   text-align: center;
@@ -411,15 +411,14 @@ section {
   margin-left: 20px;
 }
 .media-scroller {
-  --spacer: 10px;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(200px, 1fr);
-  gap: var(--spacer);
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 10px;
   z-index: 1000;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  margin: 30px var(--spacer) var(--spacer);
+  /* margin: 30px; */
   width: 89vw;
   height: min-content;
 }
@@ -430,8 +429,8 @@ section {
   padding: 20px;
   background: rgb(255,255,255, 0.3);
   border-radius: 5px;
-  width: 200px;
-  margin-bottom: var(--spacer);
+  width: 250px;
+  margin-bottom: 10px;
 }
 .media-element:hover {
   transform: translateY(-3px);
@@ -509,7 +508,7 @@ section {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 50px;
+    top: 48px;
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
